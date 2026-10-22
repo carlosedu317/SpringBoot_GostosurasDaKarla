@@ -8,6 +8,7 @@ formulario.addEventListener("submit", function(event) {
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
     const confirmarSenha = document.getElementById("confirmarSenha").value;
+    const tipoUsuario = document.getElementById("tipo").value;
 
     if (senha !== confirmarSenha) {
         alert("As senhas não são iguais!");
@@ -22,7 +23,8 @@ formulario.addEventListener("submit", function(event) {
         body: JSON.stringify({
             nome: nome,
             email: email,
-            senha: senha
+            senha: senha,
+            tipoUsuario: tipoUsuario
         })
     })
     .then(response => {
