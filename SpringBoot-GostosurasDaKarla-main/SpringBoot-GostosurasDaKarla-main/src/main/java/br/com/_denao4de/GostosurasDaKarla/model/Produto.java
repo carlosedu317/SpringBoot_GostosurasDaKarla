@@ -1,6 +1,5 @@
 package br.com._denao4de.GostosurasDaKarla.model;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,6 +25,9 @@ public class Produto {
 
     @NotBlank 
     private String descricao;
+
+    @NotBlank
+    private String imagem;
 
     public Long getId() {
         return id;
@@ -65,6 +67,14 @@ public class Produto {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
 
